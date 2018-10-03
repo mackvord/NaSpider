@@ -15,7 +15,7 @@
 *.iws
 *.iml
 *.ipr
-*.mvn
+.mvn
 
 ### NetBeans ###
 /nbproject/private/
@@ -26,5 +26,5 @@
 /.nb-gradle/
 
 ### mvnw mvnw.cmd ###
-mvnw
-mvnw.cmd
+/mvnw
+*.cmd
