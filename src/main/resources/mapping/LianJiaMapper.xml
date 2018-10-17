@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mackvord.naspider.dao.LianJiaMapper">
+    <insert id="save" parameterType="com.mackvord.naspider.model.LianJia" >
+        INSERT INTO
+        lianjia(description, price, floor, subway, houseType, direction, area, location, releaseTime, residentialArea)
+        VALUES(#{description}, #{price}, #{floor}, #{subway}, #{houseType}, #{direction}, #{area}, #{location}
+        , #{releaseTime}, #{residentialArea});
+    </insert>
+</mapper>

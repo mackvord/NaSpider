@@ -1,23 +1,24 @@
 package com.mackvord.naspider.controller;
 
-import com.mackvord.naspider.processor.NaProcessor;
+import com.mackvord.naspider.processor.LagouProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author: mackvord@gmail.com
- * @date: 18-10-3
- * @time: 下午12:28
+ * @date: 18-10-11
+ * @time: 上午9:01
  */
 @Controller
-public class NaSpiderController {
-    @Autowired
-    private NaProcessor naProcessor;
+public class LagouSpiderController {
 
-    @RequestMapping("/na")
+    @Autowired
+    private LagouProcessor lagouProcessor;
+
+    @RequestMapping("/lagou")
     public String start() {
-        naProcessor.start(naProcessor);
-        return "NaSpider is close!";
+        lagouProcessor.start(lagouProcessor);
+        return "lagouSpider is close!";
     }
 }

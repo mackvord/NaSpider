@@ -1,6 +1,6 @@
 package com.mackvord.naspider.pipeline;
 
-import com.mackvord.naspider.dao.VideoDao;
+import com.mackvord.naspider.dao.VideoMapper;
 import com.mackvord.naspider.model.Video;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -11,11 +11,12 @@ import org.springframework.stereotype.Component;
  * @time: 上午10:57
  */
 @Component
-public class MysqlPipeline {
+public class NaMysqlPipeline {
     @Autowired
-    private VideoDao videoDao;
+    private VideoMapper videoMapper;
 
     public void save(Video video) {
-        videoDao.save(video);
+        videoMapper.save(video);
     }
+
 }

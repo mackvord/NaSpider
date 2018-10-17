@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.mackvord.naspider.dao.VideoDao">
+<mapper namespace="com.mackvord.naspider.dao.VideoMapper">
     <insert id="save" parameterType="com.mackvord.naspider.model.Video" >
         INSERT INTO video(category, name, cover, url) VALUES(#{category}, #{name}, #{cover}, #{url});
     </insert>

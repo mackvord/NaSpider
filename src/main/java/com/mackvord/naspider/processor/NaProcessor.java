@@ -1,7 +1,7 @@
-package com.mackvord.naspider.processer;
+package com.mackvord.naspider.processor;
 
 import com.mackvord.naspider.model.Video;
-import com.mackvord.naspider.pipeline.MysqlPipeline;
+import com.mackvord.naspider.pipeline.NaMysqlPipeline;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import us.codecraft.webmagic.Page;
@@ -21,7 +21,7 @@ public class NaProcessor implements PageProcessor {
 
 
     @Autowired
-    private MysqlPipeline mysqlPipeline;
+    private NaMysqlPipeline naMysqlPipeline;
 
     /**
      * 设置站点信息
@@ -85,7 +85,7 @@ public class NaProcessor implements PageProcessor {
             video.setCover(coverList.get(i));
             video.setUrl(urlList.get(i));
             // 封装完成后调用DAO层保存数据
-            mysqlPipeline.save(video);
+            naMysqlPipeline.save(video);
         }
     }
 

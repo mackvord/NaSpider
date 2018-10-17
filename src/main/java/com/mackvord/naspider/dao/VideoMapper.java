@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * @time: 上午10:36
  */
 @Mapper
-public interface VideoDao {
+public interface VideoMapper {
 
     /**
      * 保存Video数据到数据库

@@ -1,23 +1,23 @@
 package com.mackvord.naspider.controller;
 
-import com.mackvord.naspider.processor.NaProcessor;
+import com.mackvord.naspider.processor.LianJiaProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author: mackvord@gmail.com
- * @date: 18-10-3
- * @time: 下午12:28
+ * @date: 18-10-15
+ * @time: 下午9:22
  */
 @Controller
-public class NaSpiderController {
+public class LianJiaController {
     @Autowired
-    private NaProcessor naProcessor;
+    private LianJiaProcessor lianJiaProcessor;
 
-    @RequestMapping("/na")
+    @RequestMapping("/lianjia")
     public String start() {
-        naProcessor.start(naProcessor);
-        return "NaSpider is close!";
+        lianJiaProcessor.start(lianJiaProcessor);
+        return "LianJiaSpider is close!";
     }
 }
